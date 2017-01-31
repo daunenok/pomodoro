@@ -2,25 +2,13 @@ var sec;
 var timer;
 var stop;
 
-function startPomodoro() {
-	$("#seconds").text("25");
-	$("#pomodoro").addClass("select");
+function startPomodoro(id, time) {
+	var selector = "#" + id;
+	$(selector).addClass("select");
+	$("#seconds").text(time);
+	time = parseInt(time) * 1000;
 	timer = setInterval(pomodoroTimer, 1000);
-	stop = setTimeout(stopTimer, 25000);
-}
-
-function startShort() {
-	$("#seconds").text("05");
-	$("#short").addClass("select");
-	timer = setInterval(pomodoroTimer, 1000);
-	stop = setTimeout(stopTimer, 5000);
-}
-
-function startLong() {
-	$("#seconds").text("10");
-	$("#long").addClass("select");
-	timer = setInterval(pomodoroTimer, 1000);
-	stop = setTimeout(stopTimer, 10000);
+	stop = setTimeout(stopTimer, time);
 }
 
 function pomodoroTimer() {

@@ -10,9 +10,9 @@
 
 <h1>Pomodoro Clock</h1>
 <div class="buttons">
-	<button onclick="startPomodoro()" id="pomodoro">Pomodoro</button>
-	<button onclick="startShort()" id="short">Short break</button>
-	<button onclick="startLong()" id="long">Long break</button>
+	<button onclick="startPomodoro('pomodoro', '25')" id="pomodoro">Pomodoro</button>
+	<button onclick="startPomodoro('short', '05')" id="short">Short break</button>
+	<button onclick="startPomodoro('long', '10')" id="long">Long break</button>
 </div>
 <div class="clock">
 	00:<span id="seconds">00</span>
