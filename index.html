@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro Clock</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Pomodoro Clock</h1>
+<div class="buttons">
+	<button onclick="startPomodoro()" id="pomodoro">Pomodoro</button>
+	<button onclick="startShort()" id="short">Short break</button>
+	<button onclick="startLong()" id="long">Long break</button>
+</div>
+<div class="clock">
+	00:<span id="seconds">00</span>
+</div>
+<div class="reset">
+	<button onclick="stopTimer()">Reset</button>
+</div>
+<script src="custom.js"></script>
+</body>
+</html>
