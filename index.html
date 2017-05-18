@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Pomodoro Clock</title>
-	
-	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+
+    <link rel="stylesheet" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
 <h1>Pomodoro Clock</h1>
 <div class="buttons">
-	<button onclick="startPomodoro('pomodoro', '25')" id="pomodoro">Pomodoro</button>
-	<button onclick="startPomodoro('short', '05')" id="short">Short break</button>
-	<button onclick="startPomodoro('long', '10')" id="long">Long break</button>
+	<button onclick="startPomodoro('pomodoro')" id="pomodoro">
+		Pomodoro
+	</button>
+	<input type="number" min="10" max="60" step="1" value="25" id="pomodoro-input"> min<br>
+	<button onclick="startPomodoro('short')" id="short">
+		Break
+	</button>
+	<input type="number" min="1" max="20" step="1" value="5" id="short-input"> min
 </div>
 <div class="clock">
-	00:<span id="seconds">00</span>
+	<span id="minutes">00</span>:<span id="seconds">00</span>
 </div>
 <div class="reset">
-	<button onclick="stopTimer()">Reset</button>
+	<button onclick="stopTimer(false)">Reset</button>
 </div>
-<script src="custom.js"></script>
+
+<audio src="train.mp3"></audio>
+
+<script src="app.js"></script>
 </body>
 </html>

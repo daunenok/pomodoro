@@ -1,1 +1,1 @@
-Pomodoro clock - Javascript/JQuery exercise for The Odin Project. Pomodoro period, short break, long break.
+Pomodoro clock - Javascript/JQuery exercise for The Odin Project. 
